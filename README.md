@@ -1,4 +1,4 @@
-# ui juventus product card
+# UI juventus product card
 
 Card of product, you can use in your shop 
 Feel free to use it
