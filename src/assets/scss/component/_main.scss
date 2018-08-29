@@ -1,0 +1,334 @@
+.main{
+  background: linear-gradient(to right, #202020, #444444);
+
+  @include MQ(L){
+    padding: 40px 0;
+  }
+
+  @include MQ(L){
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &:before{
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: .2;
+      background: linear-gradient(to left, #202020, #444444);
+    }
+
+    &:after{
+      content: "002";
+      position: absolute;
+      right: 10px;
+      bottom: 0;
+      display: block;
+      font-size: 400px;
+      font-weight: bold;
+      color: #292929;
+    }
+  }
+}
+
+.card{
+  padding: 20px;
+  background: #FFF;
+
+  @include MQ(L){
+    position: absolute;
+    z-index: 1;
+    @include center;
+    width: 700px;
+    padding: 35px;
+    margin: 0 auto 15px;
+    border-radius: 2px;
+    box-shadow: 1px 5px 20px 10px rgba(#000, .1);
+  }
+}
+
+.card-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include MQ(L){
+    margin-bottom: 28px;
+  }
+}
+
+.card__back{
+  display: flex;
+  align-items: center;
+  color: $color_gray2;
+  font-weight: 500;
+
+  .icon{
+    font-size: 22px;
+    margin-right: 12px;
+  }
+
+  &:hover{
+    color: darken($color_gray2, 20%);
+  }
+}
+
+.card-actions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-action__item{
+  margin: 0 10px;
+
+  a{
+    color: $color_gray2;
+  }
+
+  a:hover{
+    color: darken($color_gray2, 20%);
+  }
+
+  .icon{
+    font-size: 22px;
+  }
+
+  .icon.icon--yellow{
+    color: $color_yellow;
+
+    &:hover{
+      color: darken($color_gray2, 20%);
+    }
+  }
+}
+
+.card-body{
+  @include MQ(L){
+    display: flex;
+  }
+}
+
+.card-left{
+  @include MQ(L){
+    padding-right: 35px;
+  }
+}
+
+.card__title{
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: #181818;
+  text-shadow: 0 2px 5px rgba(#999, .3);
+
+  @include MQ(L){
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+}
+
+.card__metadata{
+  display: flex;
+  margin-bottom: 28px;
+
+  @include MQ(L){
+    align-items: center;
+    margin-bottom: 33px;
+  }
+}
+
+.card__price{
+  font-size: 26px;
+  font-weight: bold;
+  color: #a9a9a9;
+  margin-right: 15px;
+}
+
+.card-rating{
+  display: flex;
+  transform: rotateY(180deg);
+
+  input{
+    display: none;
+  }
+
+  label{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 26px;
+    padding: 0 15px;
+  }
+
+  label:before,
+  label:after{
+    content: "\f24e";
+    font-family: "Ionicons";
+    display: block;
+    font-size: 24px;
+  }
+
+  label:before{
+    color: $color_gray;
+  }
+
+  label:after{
+    color: $color_yellow;
+    position: absolute;
+    top: 0;
+    text-shadow: 0 2px 5px rgba(#f1f1f1, .1);
+    opacity: 0;
+    transition: .2s;
+  }
+
+  label:hover:after,
+  label:hover ~ label:after,
+  input:checked ~ label:after{
+    opacity: 1;
+  }
+}
+
+.card__description{
+  line-height: 18px;
+  color: #606060;
+  margin-bottom: 45px;
+
+  p{
+    margin-bottom: 12px;
+  }
+
+  @include MQ(L){
+    margin-bottom: 50px;
+
+    p{
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.card-info{
+  display: flex;
+  flex-direction: column;
+
+  @include MQ(M){
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.card-info-item{
+  margin-bottom: 15px;
+}
+
+.card-info-item__title{
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #3b3b3b;
+}
+
+.card-sizes{
+  display: flex;
+  margin-left: -10px;
+}
+
+.card-size-item{
+  margin-right: 4px;
+
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    color: $color_gray;
+  }
+
+  a:hover{
+    color: darken($color_gray, 10%);
+  }
+
+  &.is-active a{
+    font-weight: bold;
+    color: $color_black;
+  }
+}
+
+.card-quantifier{
+  display: flex;
+  align-items: center;
+}
+
+.card-quantity-btn{
+  background: none;
+  box-shadow: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  color: #9d9d9d;
+
+  &:hover{
+    color: #333;
+  }
+}
+
+.card__quantity{
+  display: flex;
+  justify-content: center;
+  width: 32px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+// card right
+.card-right{
+  position: relative;
+}
+
+.card__picture{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+
+  @include MQ(L){
+    width: 640px;
+  }
+}
+
+.card__add{
+  display: block;
+  box-shadow: 1px 2px 15px rgba(#060501, .1);
+  border: none;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  color: $color_black;
+  background: $color_yellow;
+
+  .icon{
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  &:hover{
+    background: darken($color_yellow, 10%);
+  }
+
+  @include MQ(L){
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+  }
+}

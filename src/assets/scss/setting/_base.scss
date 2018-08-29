@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'GTWalsheim';
+  src: url(../fonts/GTWalsheim/GT-Walsheim-Pro-Medium.woff);
+}
+
+body{
+  font-family: 'GTWalsheim', sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+
+  &.is-hidden{
+    overflow: hidden;
+  }
+}
+
+a,
+a:active,
+a:visited,
+a:hover,
+a:focus{
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button,
+button:active,
+button:visited,
+button:hover,
+button:focus{
+  cursor: pointer;
+  outline: none;
+}

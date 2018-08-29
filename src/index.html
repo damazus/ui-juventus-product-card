@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juventus Product Card</title>
+    <link rel="stylesheet" href="dist/plugins/ion/css/ionicons.min.css">
+    <link rel="stylesheet" href="dist/css/app.css">
+</head>
+<body>
+<div class="main">
+    <div class="card">
+        <div class="card-header">
+            <a href="#0" class="card__back">
+                <i class="icon ion ion-arrow-left-c"></i>
+                <span>Juventus 2015/16</span>
+            </a>
+            <ul class="card-actions">
+                <li class="card-action__item"><a href="#0"><i class="icon ion ion-android-share-alt"></i></a></li>
+                <li class="card-action__item"><a href="#0"><i class="icon icon--yellow ion ion-heart"></i></a></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <div class="card-left">
+                <h3 class="card__title">Home Jersey</h3>
+                <div class="card__metadata">
+                    <div class="card__price">$49</div>
+                    <div class="card-rating">
+                        <input type="radio" name="star" id="star1"/>
+                        <label for="star1"></label>
+                        <input type="radio" name="star" checked id="star2"/>
+                        <label for="star2"></label>
+                        <input type="radio" name="star" id="star3"/>
+                        <label for="star3"></label>
+                        <input type="radio" name="star" id="star4"/>
+                        <label for="star4"></label>
+                        <input type="radio" name="star" id="star5"/>
+                        <label for="star5"></label>
+                    </div>
+                </div>
+                <div class="card__description">
+                    <p>Wear the famous black and while of your favorite team Juventus.</p>
+                    <p>100% ClimaCool polyester. Regular Fit. Sport sleeves, embroidered Juventus and adidas logos. Sponsor to center front</p>
+                </div>
+                <div class="card-info">
+                    <div class="card-info-item">
+                        <div class="card-info-item__title">Size: </div>
+                        <ul class="card-sizes">
+                            <li class="card-size-item"><a href="#0" class="card-size-link">S</a></li>
+                            <li class="card-size-item is-active"><a href="#0" class="card-size-link">M</a></li>
+                            <li class="card-size-item"><a href="#0" class="card-size-link">L</a></li>
+                            <li class="card-size-item"><a href="#0" class="card-size-link">XL</a></li>
+                            <li class="card-size-item"><a href="#0" class="card-size-link">XXL</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-info-item">
+                        <div class="card-info-item__title">Quantity: </div>
+                        <div class="card-quantifier">
+                            <button class="card-quantity-btn card-quantity-btn--down" id="card-quantity-btn--down"><i class="ion ion-chevron-left"></i></button>
+                            <span class="card__quantity" id="card__quantity">1</span>
+                            <button class="card-quantity-btn card-quantity-btn--up" id="card-quantity-btn--up"><i class="ion ion-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-right">
+                <img src="dist/img/juventus.jpg" class="card__picture" alt="..."/>
+                <button class="card__add">
+                    <i class="icon ion ion-plus"></i>
+                    <span>Add to card</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="dist/js/app.js"></script>
+</body>
+</html>
