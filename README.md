@@ -1,7 +1,7 @@
 # UI juventus product card
 
-Card of product, you can use in your shop 
-Feel free to use it
+Simple product card
+
 ![Demo Animation](../assets/screenshot.jpg?raw=true)
 
 ## Getting Started
