@@ -1,5 +1,5 @@
 ## ui juventus product card
 
-html / css integration
+Do with HTML5, CSS and Gulp for task
 
 ![Demo Animation](../assets/screenshot.jpg?raw=true)
