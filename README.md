@@ -24,7 +24,7 @@ cd (to project folder)
 npm install
 ```
 
-### Run project server
+### Run project
 ```
 gulp
 ```
