@@ -1,0 +1,91 @@
+// breakpoints
+$S:     576px;
+$M:     768px;
+$L:     1024px;
+$XL:    1170px;
+
+// media queries
+@mixin MQ($canvas) {
+  @if $canvas == S {
+    @media only screen and (min-width: $S) { @content; }
+  }
+  @else if $canvas == M {
+    @media only screen and (min-width: $M) { @content; }
+  }
+  @else if $canvas == L {
+    @media only screen and (min-width: $L) { @content; }
+  }
+  @else {
+    @media only screen and (min-width: $canvas) { @content; }
+  }
+}
+
+// super light grid - it works with the .cd-container class inside style.scss
+@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}
+
+// center vertically and/or horizontally an absolute positioned element
+@mixin center($xy:xy) {
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+}
+
+// border radius
+@mixin border-radius($radius:.25em) {
+  border-radius: $radius;
+}
+
+// antialiasing mode font rendering
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// clearfix
+@mixin clearfix{
+  &:after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin col{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@mixin flot-before{
+  content: '';
+  display: block;
+  position: absolute;
+  background: #FFF;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px rgba(#000, .1);
+}
+
+@mixin flot{
+  font-size: 25px;
+  text-align: center;
+  color: green;
+  background: #FFF;
+  border-radius: $flot_radius;
+  box-shadow: 1px 2px 15px rgba(#000, .1);
+}

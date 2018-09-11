@@ -1,0 +1,331 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'GTWalsheim';
+  src: url(../fonts/GTWalsheim/GT-Walsheim-Pro-Medium.woff); }
+
+body {
+  font-family: 'GTWalsheim', sans-serif;
+  font-size: 16px; }
+
+a,
+a:active,
+a:visited,
+a:hover,
+a:focus {
+  cursor: pointer;
+  text-decoration: none; }
+
+button,
+button:active,
+button:visited,
+button:hover,
+button:focus {
+  cursor: pointer;
+  outline: none; }
+
+.main {
+  background: linear-gradient(to right, #202020, #444444); }
+  @media only screen and (min-width: 1024px) {
+    .main {
+      padding: 40px 0; } }
+  @media only screen and (min-width: 1024px) {
+    .main {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+      .main:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .2;
+        background: linear-gradient(to left, #202020, #444444); }
+      .main:after {
+        content: "002";
+        position: absolute;
+        right: 10px;
+        bottom: 0;
+        display: block;
+        font-size: 400px;
+        font-weight: bold;
+        color: #292929; } }
+
+.card {
+  padding: 20px;
+  background: #FFF; }
+  @media only screen and (min-width: 1024px) {
+    .card {
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      transform: translateX(-50%) translateY(-50%);
+      width: 700px;
+      padding: 35px;
+      margin: 0 auto 15px;
+      border-radius: 2px;
+      box-shadow: 1px 5px 20px 10px rgba(0, 0, 0, 0.1); } }
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; }
+  @media only screen and (min-width: 1024px) {
+    .card-header {
+      margin-bottom: 28px; } }
+
+.card__back {
+  display: flex;
+  align-items: center;
+  color: #b3b3b3;
+  font-weight: 500; }
+  .card__back .icon {
+    font-size: 22px;
+    margin-right: 12px; }
+  .card__back:hover {
+    color: gray; }
+
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.card-action__item {
+  margin: 0 10px; }
+  .card-action__item a {
+    color: #b3b3b3; }
+  .card-action__item a:hover {
+    color: gray; }
+  .card-action__item .icon {
+    font-size: 22px; }
+  .card-action__item .icon.icon--yellow {
+    color: #fecb3b; }
+    .card-action__item .icon.icon--yellow:hover {
+      color: gray; }
+
+@media only screen and (min-width: 1024px) {
+  .card-body {
+    display: flex; } }
+
+@media only screen and (min-width: 1024px) {
+  .card-left {
+    padding-right: 35px; } }
+
+.card__title {
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: #181818;
+  text-shadow: 0 2px 5px rgba(153, 153, 153, 0.3); }
+  @media only screen and (min-width: 1024px) {
+    .card__title {
+      font-size: 42px;
+      margin-bottom: 20px; } }
+
+.card__metadata {
+  display: flex;
+  margin-bottom: 28px; }
+  @media only screen and (min-width: 1024px) {
+    .card__metadata {
+      align-items: center;
+      margin-bottom: 33px; } }
+
+.card__price {
+  font-size: 26px;
+  font-weight: bold;
+  color: #a9a9a9;
+  margin-right: 15px; }
+
+.card-rating {
+  display: flex;
+  transform: rotateY(180deg); }
+  .card-rating input {
+    display: none; }
+  .card-rating label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    width: 26px;
+    padding: 0 15px; }
+  .card-rating label:before,
+  .card-rating label:after {
+    content: "\f24e";
+    font-family: "Ionicons";
+    display: block;
+    font-size: 24px; }
+  .card-rating label:before {
+    color: #9d9d9d; }
+  .card-rating label:after {
+    color: #fecb3b;
+    position: absolute;
+    top: 0;
+    text-shadow: 0 2px 5px rgba(241, 241, 241, 0.1);
+    opacity: 0;
+    transition: .2s; }
+  .card-rating label:hover:after,
+  .card-rating label:hover ~ label:after,
+  .card-rating input:checked ~ label:after {
+    opacity: 1; }
+
+.card__description {
+  line-height: 18px;
+  color: #606060;
+  margin-bottom: 45px; }
+  .card__description p {
+    margin-bottom: 12px; }
+  @media only screen and (min-width: 1024px) {
+    .card__description {
+      margin-bottom: 50px; }
+      .card__description p {
+        margin-bottom: 16px; } }
+
+.card-info {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 768px) {
+    .card-info {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; } }
+
+.card-info-item {
+  margin-bottom: 15px; }
+
+.card-info-item__title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #3b3b3b; }
+
+.card-sizes {
+  display: flex;
+  margin-left: -10px; }
+
+.card-size-item {
+  margin-right: 4px; }
+  .card-size-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    color: #9d9d9d; }
+  .card-size-item a:hover {
+    color: #848484; }
+  .card-size-item.is-active a {
+    font-weight: bold;
+    color: #181818; }
+
+.card-quantifier {
+  display: flex;
+  align-items: center; }
+
+.card-quantity-btn {
+  background: none;
+  box-shadow: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  color: #9d9d9d; }
+  .card-quantity-btn:hover {
+    color: #333; }
+
+.card__quantity {
+  display: flex;
+  justify-content: center;
+  width: 32px;
+  font-weight: bold;
+  margin: 0 10px; }
+
+.card-right {
+  position: relative; }
+
+.card__picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; }
+  @media only screen and (min-width: 1024px) {
+    .card__picture {
+      width: 640px; } }
+
+.card__add {
+  display: block;
+  box-shadow: 1px 2px 15px rgba(6, 5, 1, 0.1);
+  border: none;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin: 15px auto 0;
+  border-radius: 2px;
+  color: #181818;
+  background: #fecb3b; }
+  .card__add .icon {
+    display: inline-block;
+    margin-right: 10px; }
+  .card__add:hover {
+    background: #febe08; }
+  @media only screen and (min-width: 1024px) {
+    .card__add {
+      position: absolute;
+      right: 0;
+      bottom: 20px; } }
