@@ -1,6 +1,5 @@
 let gulp = require('gulp');
 let sass = require('gulp-sass');
-let pump = require('pump');
 let browserSync = require('browser-sync').create();
 
 
